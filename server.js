@@ -1,63 +1,23 @@
-var express = require('express')
-var bodyParser = require('body-parser')
-var app = express()
-var http = require('http').Server(app)
-var io = require('socket.io')(http)
-var mongoose = require('mongoose')
+var http = require("http");
 
-var dbUrl = "mongodb://localhost/learning_node"
+var server = http.createServer(function(req, res) {
+    res.writeHead(200, {"Content-Type": "text/html"});
 
-app.use(express.static(__dirname))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:false}))
+    res.end(`
+    <!DOCTPE html>
+    <html>
+        <head>
+            <title>HTML Response</title>
+        </head>
+        <body>
+            <h1>Serving HTML Text</h1>
+            <p>${req.url}</p>
+            <p>${req.method}</p>
+        </body>
+    </html>
+    `);
+});
 
-var Message = mongoose.model('Message', {
-    name: String,
-    message: String
-})
+server.listen(3000);
 
-app.get('/messages', (req, res) => {
-    Message.find({}, (err, messages) => {
-        res.send(messages)
-    })
-})
-
-app.get('/messages/:user', (req, res) => {
-    var user = req.params.user
-    Message.find({name: user}, (err, messages) => {
-        res.send(messages)
-    })
-})
-
-app.post('/messages', async (req, res) => {
-
-    try {
-        var message = new Message(req.body)
-        var savedMessage = await message.save()
-            console.log('saved')
-    
-            var censored = await Message.findOne({message: 'badword'})
-                if(censored)
-                    await Message.deleteOne({_id: censored.id})
-                else
-                    io.emit('message', req.body)
-                res.sendStatus(200)
-    } catch (error) {
-        res.sendStatus(500)
-        return console.error(error)
-    } finally {
-        console.log('done')
-    }
-})
-
-io.on('connection', (socket) => {
-    console.log('a user connected')
-})
-
-mongoose.connect(dbUrl, {useNewUrlParser: true}, (err) => {
-    console.log('mongo db connnection', err)
-})
-
-const server = http.listen(3000, () => {
-    console.log('server is listening on port', server.address().port)
-})
+console.log("Server listening on port 3000");
