@@ -10,5 +10,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nock": "^10.0.6",
+    "sinon": "^7.3.2"
+  },
+  "dependencies": {
+    "rewire": "^4.0.1"
+  }
 }
