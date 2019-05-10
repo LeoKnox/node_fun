@@ -1,0 +1,44 @@
+js
+function dosomething() {
+  var viking = document.forms[0];
+  var element = document.forms[0].rooms.value;
+  console.log(viking);
+}
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div id="action" onsubmit="dosomething()" method="POST">
+    <form>
+      <label>Rooms</label>
+      <input type=text name="rooms" />
+      <label>Size</label>
+      <input type=text name="size"/>
+      <input type="submit" value="Generate" />
+    </form>
+  </div>
+  <div id="dungeon">
+      dungeon here
+  </div>
+  <div id="parameters">
+    <br>
+    
+  </div>
+</body>
+</html>
+
+css
+#action {
+  display: inline-block;
+  border: 1px solid red;
+}
+
+#dungeon {
+  display: inline-block;
+}
