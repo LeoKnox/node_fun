@@ -17,6 +17,13 @@ function clicked() {
   alert("blue");
 }
 
+function clicked() {
+  var v=-250
+  $(".bottom").css('width','100px');
+  $(".right").css('transform', `translateX(${v}px)`);
+  alert("blue");
+}
+
 css
 .wrap {
 	perspective: 800px;
