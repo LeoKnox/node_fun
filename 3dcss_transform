@@ -21,7 +21,7 @@ function clicked() {
   var v=-250
   $(".bottom").css('width','100px');
   $(".right").css('transform', `translateX(${v}px)`);
-  alert("blue");
+  alert("red");
 }
 
 css
