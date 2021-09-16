@@ -14,7 +14,9 @@ class Tree {
   insert(data) {
     if (this.head == null) {
       this.head = data;
-    } else {}
+    } else {
+      add_node(this.head, data)
+    };
   }
 };
 
