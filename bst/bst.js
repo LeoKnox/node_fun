@@ -14,8 +14,10 @@ class Tree {
   insert(data) {
     if (this.head == null) {
       this.head = data;
-    };
+    } else {}
   }
 };
 
-console.log("write");
+const new_tree = new Tree();
+Tree.insert(5);
+console.log(new_tree.head);
