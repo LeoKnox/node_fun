@@ -12,14 +12,16 @@ class Tree {
   }
   
   insert(data) {
-    if (this.head == null) {
+    if (this.head === null) {
       this.head = data;
+      console.log("head added");
     } else {
       this.add_node(this.head, data)
     };
   }
   
   add_node(pointer, data) {
+    console.log("node added");
     console.log(data);
   }
 };
