@@ -12,15 +12,19 @@ class Tree {
   }
   
   insert(data) {
-    let new_node = Node(data);
     if (this.head == null) {
       this.head = data;
     } else {
-      add_node(this.head, this.new_node);
+      this.add_node(this.head, data)
     };
+  }
+  
+  add_node(pointer, data) {
+    console.log(data);
   }
 };
 
 const new_tree = new Tree();
-Tree.insert(5);
+new_tree.insert(5);
+new_tree.insert(7);
 console.log(new_tree.head);
