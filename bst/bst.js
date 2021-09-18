@@ -31,6 +31,13 @@ class Tree {
       } else {
         this.add_node(pointer.right, thisNode);
       }
+    } else if ((pointer.data) > (thisNode.data)) {
+      if (pointer.left === null) {
+        pointer.left = thisNode;
+        console.log("left node added");
+      } else {
+        this.add_node(pointer.left, thisNode);
+      }
     }
   }
 };
@@ -38,7 +45,12 @@ class Tree {
 const new_tree = new Tree();
 new_tree.insert(5);
 new_tree.insert(7);
-new_tree.insert(9);
+new_tree.insert(2);
+//new_tree.insert(3);
+//new_tree.insert(15);
+//new_tree.insert(4);
+//new_tree.insert(1);
+
 //console.log(new_tree.head);
 console.log("more good stuff");
-console.log(new_tree.head.right);
+console.log(new_tree.head);
