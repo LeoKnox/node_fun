@@ -14,7 +14,7 @@ class Tree {
   insert(data) {
     var newNode = new Node(data);
     if (this.head === null) {
-      this.head = data;
+      this.head = newNode;
       console.log("head added");
     } else {
       console.log("insert that node!")
@@ -32,6 +32,6 @@ class Tree {
 const new_tree = new Tree();
 new_tree.insert(5);
 new_tree.insert(7);
-console.log(new_tree.head);
+//console.log(new_tree.head);
 console.log("more good stuff");
-console.log(new_tree.left);
+console.log(new_tree.head.left);
