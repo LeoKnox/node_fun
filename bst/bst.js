@@ -28,6 +28,8 @@ class Tree {
       if (pointer.right === null){
         pointer.right = thisNode;
         console.log("node added");
+      } else {
+        this.add_node(pointer.right, thisNode);
       }
     }
   }
@@ -36,6 +38,7 @@ class Tree {
 const new_tree = new Tree();
 new_tree.insert(5);
 new_tree.insert(7);
+new_tree.insert(9);
 //console.log(new_tree.head);
 console.log("more good stuff");
-console.log(new_tree.head.right.data);
+console.log(new_tree.head.right);
