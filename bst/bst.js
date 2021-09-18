@@ -22,7 +22,8 @@ class Tree {
   }
   
   add_node(pointer, data) {
-    pointer.left = data;
+    var newNode = new Node(data);
+    pointer.left = newNode;
     console.log("node added");
     console.log(data);
   }
@@ -33,4 +34,4 @@ new_tree.insert(5);
 new_tree.insert(7);
 console.log(new_tree.head);
 console.log("more good stuff");
-console.log(new_tree);
+console.log(new_tree.left);
