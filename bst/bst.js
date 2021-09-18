@@ -12,20 +12,20 @@ class Tree {
   }
   
   insert(data) {
+    var newNode = new Node(data);
     if (this.head === null) {
       this.head = data;
       console.log("head added");
     } else {
       console.log("insert that node!")
-      this.add_node(this.head, data)
+      this.add_node(this.head, newNode)
     };
   }
   
-  add_node(pointer, data) {
-    var newNode = new Node(data);
-    pointer.left = newNode;
+  add_node(pointer, thisNode) {
+    pointer.left = thisNode;
     console.log("node added");
-    console.log(data);
+    console.log(pointer);
   }
 };
 
