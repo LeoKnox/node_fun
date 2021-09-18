@@ -23,9 +23,13 @@ class Tree {
   }
   
   add_node(pointer, thisNode) {
-    pointer.left = thisNode;
-    console.log("node added");
-    console.log(pointer);
+    if ((pointer.data) < (thisNode.data)) {
+      console.log("Lesser path taken")
+      if (pointer.right === null){
+        pointer.right = thisNode;
+        console.log("node added");
+      }
+    }
   }
 };
 
@@ -34,4 +38,4 @@ new_tree.insert(5);
 new_tree.insert(7);
 //console.log(new_tree.head);
 console.log("more good stuff");
-console.log(new_tree.head.left);
+console.log(new_tree.head.right.data);
