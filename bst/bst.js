@@ -45,12 +45,12 @@ class Tree {
     if (pointer.left === null) {
       return(pointer.data);
     } else {
-      this.scan_tree(pointer.left);
+      console.log(this.scan_tree(pointer.left));
     }
   }
   
   print_tree() {
-    cur_node = this.head;
+    let cur_node = this.head;
     if (cur_node === null) {
       console.log("Emptry Tree");
     } else {
