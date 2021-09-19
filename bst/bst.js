@@ -44,6 +44,8 @@ class Tree {
   scan_tree(pointer) {
     if (pointer.left === null) {
       return(pointer.data);
+    } else {
+      this.scan_tree(pointer.left);
     }
   }
   
