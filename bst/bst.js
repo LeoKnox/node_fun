@@ -40,9 +40,17 @@ class Tree {
       }
     }
   }
+  
+  print_tree() {
+    cur_node = this.head;
+    if (cur_node === null) {
+      console.log("Emptry Tree");
+    }
+  }
 };
 
 const new_tree = new Tree();
+new_tree.print_tree();
 new_tree.insert(5);
 new_tree.insert(7);
 new_tree.insert(2);
