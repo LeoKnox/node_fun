@@ -41,10 +41,18 @@ class Tree {
     }
   }
   
+  scan_tree(pointer) {
+    if (pointer.left === null) {
+      return(pointer.data);
+    }
+  }
+  
   print_tree() {
     cur_node = this.head;
     if (cur_node === null) {
       console.log("Emptry Tree");
+    } else {
+      console.log(this.scan_tree(cur_node.left));
     }
   }
 };
@@ -54,11 +62,11 @@ new_tree.print_tree();
 new_tree.insert(5);
 new_tree.insert(7);
 new_tree.insert(2);
-//new_tree.insert(3);
-//new_tree.insert(15);
-//new_tree.insert(4);
-//new_tree.insert(1);
-
+new_tree.insert(3);
+new_tree.insert(15);
+new_tree.insert(4);
+new_tree.insert(1);
+new_tree.print_tree();
 //console.log(new_tree.head);
 console.log("more good stuff");
 console.log(new_tree.head);
