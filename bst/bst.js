@@ -60,6 +60,8 @@ class Tree {
       console.log("Emptry Tree");
     } else {
       this.scan_tree(cur_node.left);
+      console.log(cur_node.data);
+      this.scan_tree(cur_node.right);
       //console.log(cur_node)
     }
   }
