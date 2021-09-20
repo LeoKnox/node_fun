@@ -17,24 +17,24 @@ class Tree {
       this.head = newNode;
       console.log("head added");
     } else {
-      console.log("insert that node!")
+      //console.log("insert that node!")
       this.add_node(this.head, newNode)
     };
   }
   
   add_node(pointer, thisNode) {
     if ((pointer.data) < (thisNode.data)) {
-      console.log("Lesser path taken")
+      //console.log("Lesser path taken")
       if (pointer.right === null){
         pointer.right = thisNode;
-        console.log("node added");
+        //console.log("node added");
       } else {
         this.add_node(pointer.right, thisNode);
       }
     } else if ((pointer.data) > (thisNode.data)) {
       if (pointer.left === null) {
         pointer.left = thisNode;
-        console.log("left node added");
+        //console.log("left node added");
       } else {
         this.add_node(pointer.left, thisNode);
       }
@@ -42,10 +42,14 @@ class Tree {
   }
   
   scan_tree(pointer) {
-    if (pointer.left === null) {
+    if ((pointer.left === null) && (pointer.right === null)) {
       return(pointer.data);
-    } else {
+    }
+    if (pointer.left !== null) {
       console.log(this.scan_tree(pointer.left));
+    }
+    if (pointer.right !== null) {
+      console.log(this.scan_tree(pointer.right));
     }
   }
   
