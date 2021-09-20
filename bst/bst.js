@@ -43,14 +43,14 @@ class Tree {
   
   scan_tree(pointer) {
     if ((pointer.left === null) && (pointer.right === null)) {
-      return(pointer.data);
+      console.log(pointer.data);
     }
     if (pointer.left !== null) {
-      console.log(this.scan_tree(pointer.left));
+      this.scan_tree(pointer.left);
     }
     console.log(pointer.data);
     if (pointer.right !== null) {
-      console.log(this.scan_tree(pointer.right));
+      this.scan_tree(pointer.right);
     }
   }
   
