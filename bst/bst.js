@@ -47,6 +47,7 @@ class Tree {
     }
     if (pointer.left !== null) {
       console.log(this.scan_tree(pointer.left));
+      console.log(pointer.data);
     }
     if (pointer.right !== null) {
       console.log(this.scan_tree(pointer.right));
@@ -58,7 +59,8 @@ class Tree {
     if (cur_node === null) {
       console.log("Emptry Tree");
     } else {
-      console.log(this.scan_tree(cur_node.left));
+      this.scan_tree(cur_node.left);
+      //console.log(cur_node)
     }
   }
 };
