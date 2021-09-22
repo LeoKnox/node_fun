@@ -18,9 +18,11 @@ function removeDuplicateWords (s) {
             start = j;
           }
           stop = j;
-          del_word = del_word + s[i];
+          del_word = del_word + s[j];
         } else if (del_word == key_word) {
           s.slice(start, stop);
+          del_word = "";
+        } else {
           del_word = "";
         }
         console.log(del_word + ": key :" + key_word);
