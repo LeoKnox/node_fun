@@ -17,7 +17,7 @@ function removeDuplicateWords (s) {
           if (start === 0) {
             start = j;
           }
-          stop = j;
+          stop++;
           del_word = del_word + s[j];
         } else if (del_word === key_word) {
           console.log("word and word" + start + ":" + stop);
@@ -26,9 +26,11 @@ function removeDuplicateWords (s) {
           console.log(s);
           del_word = "";
           start = 0;
+          stop = 0;
         } else {
           del_word = "";
           start = 0;
+          stop = 0;
         }
         console.log(del_word + ": key :" + key_word);
       }
