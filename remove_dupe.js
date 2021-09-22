@@ -14,7 +14,7 @@ function removeDuplicateWords (s) {
       console.log(key_word);
       for (var j = i; j < s.length; j++) {
         if (s[j] != " ") {
-          if (start != 0) {
+          if (start !== 0) {
             start = j;
           }
           stop = j;
@@ -23,6 +23,7 @@ function removeDuplicateWords (s) {
           s.slice(start, stop);
           del_word = "";
         }
+        console.log(del_word + ": key :" + key_word);
       }
       key_word = "";
     }
@@ -31,3 +32,7 @@ function removeDuplicateWords (s) {
     console.log(s[x]);
   }
 }
+
+
+let s = "one two three one three four two";
+removeDuplicateWords (s);
