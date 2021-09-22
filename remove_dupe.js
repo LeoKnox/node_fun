@@ -14,7 +14,7 @@ function removeDuplicateWords (s) {
       console.log(key_word);
       for (var j = i; j < s.length; j++) {
         if (s[j] != " ") {
-          if (start !== 0) {
+          if (start === 0) {
             start = j;
           }
           stop = j;
@@ -23,8 +23,10 @@ function removeDuplicateWords (s) {
           console.log("word and word" + start + ":" + stop);
           s.slice(start, stop);
           del_word = "";
+          start = 0;
         } else {
           del_word = "";
+          start = 0;
         }
         console.log(del_word + ": key :" + key_word);
       }
