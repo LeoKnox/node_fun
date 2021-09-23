@@ -13,8 +13,9 @@ if ((a[step-2] === 1) && (a[step-1] === 1)) {
 }
 
 console.log(a);
+console.log(a[a.length-1]);
 
-for (let j = a[step-1]; j > 0; j--) {
+for (let j = a[a.length-1]; j > 0; j--) {
   let temp = a[j-1];
   a[j-2] = a[j-1];
   a[j-1] = temp;
