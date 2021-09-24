@@ -20,7 +20,17 @@ class hashTable {
     }
     this.values[hash][key] = value;
   }
+
+  searchHash(key) {
+    const hash = this.calculateHash(key);
+    if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)) {
+      return this.values[hash][key];
+    } else {
+      return null;
+    }
+  }
 }
 
 var ht = new hashTable();
-ht.addHash("One", 8)
+ht.addHash("One", 8);
+console.log(ht.size);
