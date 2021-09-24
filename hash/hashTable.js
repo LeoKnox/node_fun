@@ -33,4 +33,5 @@ class hashTable {
 
 var ht = new hashTable();
 ht.addHash("One", 8);
+console.log(ht.searchHash("One"));
 console.log(ht.size);
