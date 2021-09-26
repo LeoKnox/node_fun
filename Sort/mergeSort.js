@@ -13,9 +13,12 @@ function mergeSort(mArr, x, y) {
     return mArr;
   } else {
     console.log("3rd else");
-    console.log("x"+mArr.slice(0, mArr.length/2));
-    newArr = mergeSort(mArr.slice(0, mArr.length/2));
-    newArr.concat(mergeSort(mArr.slice(mArr.length/2+1, mArr.length)));
+    x=mArr.slice(0, mArr.length/2);
+    y=mArr.slice(mArr.length/2+1, mArr.length-1);
+    console.log(x + mArr);
+    newArr = mergeSort(x);
+    console.log()
+    newArr.concat(mergeSort(y));
     console.log("3"+mArr);
     return(newArr);
   }
