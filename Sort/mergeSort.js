@@ -1,4 +1,4 @@
-let one = [3,1,4,6];
+let one = [1,3,4,6];
 
 function mergeSort(mArr, x, y) {
   let newArr = [];
@@ -14,8 +14,8 @@ function mergeSort(mArr, x, y) {
   } else {
     console.log("3rd else");
     console.log("x"+mArr.slice(0, mArr.length/2));
-    newArr == mergeSort(mArr.slice(0, mArr.length/2));
-    //newArr.concat(mArr.length/2+1, mArr.length);
+    newArr = mergeSort(mArr.slice(0, mArr.length/2));
+    newArr.concat(mergeSort(mArr.slice(mArr.length/2+1, mArr.length)));
     console.log("3"+mArr);
     return(newArr);
   }
