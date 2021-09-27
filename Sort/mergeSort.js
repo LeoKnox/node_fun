@@ -5,8 +5,7 @@ function mergeArr(aArr, bArr) {
   newArr = [];
   a = 0;
   b = 0;
-  console.log("a:"+aArr.length);
-  console.log("b:"+bArr.length);
+  console.log("mA:"+aArr.length);
   while((a < aArr.length) && (b < bArr.length)){
     console.log("start while");
     if (aArr[a] < bArr[b]) {
