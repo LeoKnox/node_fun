@@ -5,7 +5,10 @@ function mergeArr(aArr, bArr) {
   newArr = [];
   a = 0;
   b = 0;
+  console.log("a:"+aArr.length);
+  console.log("b:"+bArr.length);
   while((a < aArr.length) && (b < bArr.length)){
+    console.log("start while");
     if (aArr[a] < bArr[b]) {
       newArr.push(aArr[a]);
       a++;
@@ -26,24 +29,19 @@ function mergeSort(mArr, x, y) {
     let temp = mArr[1];
     mArr[1] = mArr[0];
     mArr[0] = temp;
-    console.log(mArr);
     return mArr;
   } else if (mArr.length < 3) {
-    console.log("2"+mArr);
     return mArr;
   } else {
-    console.log("3rd else");
     x=mArr.slice(0, mArr.length/2);
     y=mArr.slice(mArr.length/2, mArr.length);
-    console.log(y + "!");
+    console.log("x:"+x);
+    console.log("y:"+y);
     newArr = mergeSort(x);
-    console.log()
     newArr+= mergeSort(y);
     newArr = mergeArr(x, y);
-    console.log("3"+mArr);
     return(newArr);
   }
-  console.log(mArr);
 }
 
 console.log(mergeSort(one, 0, one.length));
