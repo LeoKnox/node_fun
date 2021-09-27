@@ -10,6 +10,7 @@ function mergeArr(aArr, bArr) {
       a++;
     } else {
       newArr.push(bArr[b]);
+      b++;
     }
   }
   return(newArr);
