@@ -5,7 +5,7 @@ function mergeArr(aArr, bArr) {
   newArr = [];
   a = 0;
   b = 0;
-  while((aArr[a] < aArr.length) && (bArr[b] < bArr.length)){
+  while((a < aArr.length) && (b < bArr.length)){
     if (aArr[a] < bArr[b]) {
       newArr.push(aArr[a]);
       a++;
