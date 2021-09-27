@@ -1,5 +1,20 @@
 let one = [6,1,4,3];
 
+function mergeArr(aArr, bArr) {
+  newArr = [];
+  a = 0;
+  b = 0;
+  while((aArr[a] < aArr.length) && (bArr[b] < bArr.length)){
+    if (aArr[a] < bArr[b]) {
+      newArr.push(arr[a]);
+      a++;
+    } else {
+      newArr.push(bArr[b]);
+    }
+  }
+  return(newArr);
+}
+
 function mergeSort(mArr, x, y) {
   let newArr = [];
   if ((mArr.length < 3) && (mArr[1] < mArr[0])) {
@@ -19,6 +34,7 @@ function mergeSort(mArr, x, y) {
     newArr = mergeSort(x);
     console.log()
     newArr+= mergeSort(y);
+    newArr = mergeArr(x, y);
     console.log("3"+mArr);
     return(newArr);
   }
