@@ -1,18 +1,22 @@
 let one = [6,1,4,3];
 
 function mergeArr(aArr, bArr) {
+  console.log("Start");
   newArr = [];
   a = 0;
   b = 0;
   while((aArr[a] < aArr.length) && (bArr[b] < bArr.length)){
     if (aArr[a] < bArr[b]) {
-      newArr.push(arr[a]);
+      newArr.push(aArr[a]);
       a++;
+      console.log("9"+newArr);
     } else {
       newArr.push(bArr[b]);
       b++;
+      console.log("0"+newArr);
     }
   }
+  console.log ("merge"+newArr);
   return(newArr);
 }
 
