@@ -13,7 +13,7 @@ class Link {
   }
   
   add(value) {
-    console.log(value);
+    //console.log(value);
     var newLink = new Node(value);
     this.head = newLink;
   }
@@ -22,5 +22,6 @@ class Link {
 ll = new Link();
 console.log(ll);
 nn = new Node("Blue");
+console.log(nn);
 ll.add(nn);
 console.log(ll);
