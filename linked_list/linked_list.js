@@ -9,8 +9,13 @@ class Link {
   constructor() {
     this.head = null;
   }
+  
+  add(value) {
+    var newLink = new Node(value);
+    this.head = newLink;
+  }
 }
 
 ll = new Link();
-ll.head = new Node('blue');
-console.log(ll.head.value);
+ll.add('blue');
+console.log(ll.head);
