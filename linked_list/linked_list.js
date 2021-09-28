@@ -30,6 +30,19 @@ class Link {
       runner.next = newLink;
     }
   }
+  
+  print() {
+    if (this.head == null) {
+      return true;
+    } else {
+      let runner = this.head;
+      console.log(runner.value);
+      while (runner.next != null) {
+        runner = runner.next;
+        console.log(runner.value);
+      }
+    }
+  }
 }
 
 ll = new Link();
@@ -37,4 +50,5 @@ console.log(ll);
 ll.add("blue");
 ll.add("green");
 ll.add("orange");
+ll.print();
 console.log(ll);
