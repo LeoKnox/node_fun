@@ -20,5 +20,7 @@ class Link {
 }
 
 ll = new Link();
-ll.add('blue');
-console.log(ll.head);
+console.log(ll);
+nn = new Node("Blue");
+ll.add(nn);
+console.log(ll);
