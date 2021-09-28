@@ -1,7 +1,7 @@
 class Node {
   constructor (value) {
     console.log("node construct");
-    this.value = this.value;
+    this.value = value;
     this.next = null;
   }
 }
@@ -21,7 +21,5 @@ class Link {
 
 ll = new Link();
 console.log(ll);
-nn = new Node("Blue");
-console.log(nn);
-ll.add(nn);
+ll.add("blue");
 console.log(ll);
