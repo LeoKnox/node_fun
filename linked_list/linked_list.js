@@ -10,3 +10,7 @@ class Link {
     this.head = null;
   }
 }
+
+ll = new Link();
+ll.head = new Node('blue');
+console.log(ll.next.value);
