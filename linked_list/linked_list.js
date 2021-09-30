@@ -1,3 +1,11 @@
+class Node {
+  constructor (value) {
+    console.log("node construct");
+    this.value = value;
+    this.next = null;
+  }
+}
+
 class Link {
   constructor() {
     console.log("link construct");
@@ -24,7 +32,8 @@ class Link {
   }
   
   addPosition(value, position) {
-    if ((this.head == null) && (position > 0)) {
+    let cursor = 0;
+    if ((this.head == null) && (cursor != position)) {
       console.log("error out of bounds");
     }
   }
