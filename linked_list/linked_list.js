@@ -23,6 +23,12 @@ class Link {
     }
   }
   
+  addPosition(value, position) {
+    if ((this.head == null) && (position > 0)) {
+      console.log("error out of bounds");
+    }
+  }
+  
   addFront(value) {
     let runner = this.head;
     let newLink = new Node(value);
@@ -46,6 +52,7 @@ class Link {
 
 ll = new Link();
 console.log(ll);
+ll.addPosition("red", 7);
 ll.add("blue");
 ll.addFront("indigo");
 ll.add("green");
