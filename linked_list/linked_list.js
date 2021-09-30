@@ -36,6 +36,12 @@ class Link {
     if ((this.head == null) && (cursor != position)) {
       console.log("error out of bounds");
     }
+    let runner = this.head;
+    while ((runner != null) && (cursor != position)) {
+      runner = runner.next;
+      cursor++;
+    }
+    console.log(runner.value);
   }
   
   addFront(value) {
@@ -61,10 +67,11 @@ class Link {
 
 ll = new Link();
 console.log(ll);
-ll.addPosition("red", 7);
+ll.addPosition("red", 1);
 ll.add("blue");
 ll.addFront("indigo");
 ll.add("green");
+ll.addPosition("red", 1);
 ll.add("orange");
 ll.print();
 console.log(ll);
