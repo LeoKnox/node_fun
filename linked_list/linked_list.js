@@ -1,11 +1,3 @@
-class Node {
-  constructor (value) {
-    console.log("node construct");
-    this.value = value;
-    this.next = null;
-  }
-}
-
 class Link {
   constructor() {
     console.log("link construct");
@@ -31,6 +23,13 @@ class Link {
     }
   }
   
+  addFront(value) {
+    let runner = this.head;
+    let newLink = new Node(value);
+    newLink.next = this.head;
+    this.head = newLink;
+  }
+  
   print() {
     if (this.head == null) {
       return true;
@@ -48,6 +47,7 @@ class Link {
 ll = new Link();
 console.log(ll);
 ll.add("blue");
+ll.addFront("indigo");
 ll.add("green");
 ll.add("orange");
 ll.print();
