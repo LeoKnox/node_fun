@@ -38,15 +38,11 @@ class Link {
     }
     let runner = this.head;
     while ((runner != null) && (cursor != position)) {
-      runner = runner.next;
       cursor++;
       let newnode = new Node(value);
-      if (runner.next == null) {
-        runner.next = newnode;
-      } else {
-        newnode.next = runner.next;
-        runner.next = newnode;
-      }
+      newnode.next = runner.next;
+      runner.next = newnode;
+      runner = runner.next;
     }
     console.log(runner.value);
   }
@@ -75,7 +71,7 @@ class Link {
 ll = new Link();
 console.log(ll);
 ll.add("blue");
-//ll.addPosition("yellow", 1);
+ll.addPosition("yellow", 1);
 ll.addFront("indigo");
 ll.add("green");
 ll.addPosition("red", 1);
