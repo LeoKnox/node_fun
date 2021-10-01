@@ -40,6 +40,10 @@ class Link {
     while ((runner != null) && (cursor != position)) {
       runner = runner.next;
       cursor++;
+      let newnode = new Node(value);
+      newnode.next = runner.next;
+      runner.next = newnode;
+      
     }
     console.log(runner.value);
   }
@@ -67,8 +71,8 @@ class Link {
 
 ll = new Link();
 console.log(ll);
-ll.addPosition("red", 1);
 ll.add("blue");
+ll.addPosition("yellow", 1);
 ll.addFront("indigo");
 ll.add("green");
 ll.addPosition("red", 1);
