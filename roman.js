@@ -1,4 +1,4 @@
-let roman = "LXVI";
+let roman = "XXXIX";
 let total = 0;
 
 for (var i = 0; i < roman.length; i++) {
@@ -20,9 +20,10 @@ for (var i = 0; i < roman.length; i++) {
   if (roman.charAt(i) == "I") {
     if (roman.charAt(i+1) == "X") {
       total += 9
+      i++;
     }
   } else {
-    total += 1;
+    //total += 1;
   }
   console.log(total);
 }
