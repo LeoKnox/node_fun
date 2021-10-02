@@ -4,7 +4,8 @@ let total = 0;
 for (var i = 0; i < roman.length; i++) {
   if (roman.charAt(i) == "L") {
     console.log(50);
-    let prev = roman.charAt(i);
-    console.log(prev);
+    if (roman.charAt(i+1) == "X") {
+      total += 50;
+    }
   }
 }
