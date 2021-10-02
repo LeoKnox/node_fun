@@ -10,11 +10,19 @@ for (var i = 0; i < roman.length; i++) {
   if (roman.charAt(i) == "X") {
     if (roman.charAt(i+1) == "L") {
       total += 40;
-    } else if (roman.charAt(i+1) == "I") {
-      total += 9;
-    }  else {
+    } else {
       total += 10;
     }
+  }
+  if (roman.charAt(i) == "V") {
+    total += 5;
+  }
+  if (roman.charAt(i) == "I") {
+    if (roman.charAt(i+1) == "X") {
+      total += 9
+    }
+  } else {
+    total += 1;
   }
   console.log(total);
 }
