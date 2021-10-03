@@ -7,10 +7,8 @@ for (let i = 0; i < grapeArr.length; i++) {
 }
 
 for (let j = 0; j < plumArr.length; j++) {
-  console.log(plumArr[j]);
-  if (grapeArr.key === j) {
+  if (newDict[plumArr[j]] === undefined) {
     console.log("false");
-    break;
   }
 }
 
