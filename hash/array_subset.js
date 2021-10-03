@@ -7,10 +7,11 @@ for (let i = 0; i < grapeArr.length; i++) {
 }
 
 for (let j = 0; j < plumArr.length; j++) {
-  if (Object.keys(grapeArr[plumArr[j]])) {
+  console.log(plumArr[j]);
+  if (grapeArr[j] !== j) {
     console.log("false");
+    break;
   }
-  console.log(grapeArr[j]);
 }
 
 console.log(newDict);
