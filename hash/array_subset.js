@@ -8,7 +8,7 @@ for (let i = 0; i < grapeArr.length; i++) {
 
 for (let j = 0; j < plumArr.length; j++) {
   console.log(plumArr[j]);
-  if (grapeArr[j] !== j) {
+  if (grapeArr.key === j) {
     console.log("false");
     break;
   }
