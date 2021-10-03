@@ -7,7 +7,7 @@ for (let i = 0; i < grapeArr.length; i++) {
 }
 
 for (let j = 0; j < plumArr.length; j++) {
-  if (Object.keys(grapeArr[j])) {
+  if (Object.keys(grapeArr[plumArr[j]])) {
     console.log("false");
   }
   console.log(grapeArr[j]);
