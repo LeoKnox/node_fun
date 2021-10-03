@@ -31,7 +31,11 @@ class hashTable {
   }
 }
 
+let firstArr = ["one", "two"];
+let secondArr = ["two", "three"];
 var ht = new hashTable();
 ht.addHash("One", 8);
+ht.addHash("Four", 4);
+console.log(ht.searchHash("Four"));
 console.log(ht.searchHash("One"));
 console.log(ht.size);
