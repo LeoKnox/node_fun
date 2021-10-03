@@ -6,7 +6,7 @@ class hashTable {
   }
   
   calculateHash(key) {
-    console.log('HI');
+    console.log("ch " + key.toString().length % this.size);
     return key.toString().length % this.size;
   }
   
@@ -36,6 +36,8 @@ let secondArr = ["two", "three"];
 var ht = new hashTable();
 ht.addHash("One", 8);
 ht.addHash("Four", 4);
-console.log(ht.searchHash("Four"));
+ht.addHash("five", 5);
+ht.addHash("five", 6);
+console.log("four " + ht.searchHash("Four"));
 console.log(ht.searchHash("One"));
 console.log(ht.size);
