@@ -6,4 +6,11 @@ for (let i = 0; i < grapeArr.length; i++) {
   newDict[grapeArr[i]] = grapeArr[i];
 }
 
+for (let j = 0; j < plumArr.length; j++) {
+  if (Object.keys(grapeArr[j])) {
+    console.log("false");
+  }
+  console.log(grapeArr[j]);
+}
+
 console.log(newDict);
