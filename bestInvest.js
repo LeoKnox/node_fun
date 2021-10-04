@@ -9,8 +9,9 @@ for (let i = 1; i < tD.length; i++) {
     sum += tD[i]-low;
     console.log("s " + sum);
     if ((tD[i]-low) > largest) {
-      largest = tD[i]-low;
+      largest = tD[i];
     }
+    low = tD[i];
   } else if (low > tD[i]) {
     low = tD[i];
   }
