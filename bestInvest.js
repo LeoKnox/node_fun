@@ -1,21 +1,17 @@
-let tD = [8, 9, 4, 9, 3, 2, 7, 8];
-let low = tD[0];
-let largest = 0;
-let sum = 0;
-let bLarge = false;
+let tS = "aab";
+let curChar = tS[0];
+let curTotal = 1;
+let oA = "";
 
-for (let i = 1; i < tD.length; i++) {
-  if (low < tD[i]) {
-    sum += tD[i]-low;
-    console.log("s " + sum);
-    if ((tD[i]-low) > largest) {
-      largest = tD[i];
-    }
-    low = tD[i];
-  } else if (low > tD[i]) {
-    low = tD[i];
+for (let i = 1; i < tS.length; i++) {
+  if (curChar == tS.charAt(i)) {
+    curTotal += 1;
+  } else {
+    oA.push += curChar;
+    curChar = tS.charAt(i);
+    curTotal = 0;
   }
+  console.log(tS.charAt(i));
 }
 
-console.log("L " + largest);
-console.log(sum);
+console.log(oA);
