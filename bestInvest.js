@@ -2,6 +2,7 @@ let tD = [8, 9, 4, 9, 3, 2, 7, 8];
 let low = tD[0];
 let largest = 0;
 let sum = 0;
+let bLarge = false;
 
 for (let i = 1; i < tD.length; i++) {
   if (low < tD[i]) {
