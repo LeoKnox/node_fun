@@ -15,16 +15,18 @@ class Heap {
       this.arr.push(value);
     } else {
       let p = 0;
-      while (p < this.arr.length) {
+      while (p <= this.arr.length) {
         if (this.arr[p] > value) {
+          console.log(this.arr[p] + ":" + value + "p" + p);
           let temp = this.arr[p];
           this.arr[p] = value;
           value = temp;
-          return;
         }
         if (this.arr[p] > this.arr[p+1]) {
+          console.log(this.arr[p] + ":" + value + "p" + p);
           p = this.arr[p];
         } else {
+          console.log(this.arr[p] + ":" + value + "p" + p);
           p = this.arr[p+1];
         }
       }
