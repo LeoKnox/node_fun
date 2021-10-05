@@ -20,15 +20,19 @@ class Heap {
           let temp = this.arr[0];
           this.arr[0] = value;
           this.arr.push(temp);
+        } else {
+          this.arr.push(value);
         }
         p++;
       }
+      console.log(p);
     }
-    console.log(this.arr);
   }
 };
 
 let arrHeap = new Heap();
 arrHeap.insert(5);
 arrHeap.insert(2);
+arrHeap.insert(6);
+arrHeap.insert(7);
 console.log(arrHeap);
