@@ -20,7 +20,7 @@ class Heap {
           let temp = this.arr[p];
           this.arr[p] = value;
           //this.arr.push(temp);
-          //return;
+          return;
         }
         if (this.arr[p] > this.arr[p+1]) {
           p = this.arr[p];
