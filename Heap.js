@@ -16,17 +16,17 @@ class Heap {
     } else {
       let p = 0;
       while (p < this.arr.length) {
-        if (this.arr[p] > this.arr[p+1]) {
+        if (this.arr[p] > value) {
+          let temp = this.arr[p];
+          this.arr[p] = value;
+          this.arr.push(temp);
+        }
+      }
+      if (this.arr[p] > this.arr[p+1]) {
           p = this.arr[p];
         } else {
           p = this.arr[p+1];
         }
-        if (this.arr[p] > value) {
-          let temp = this.arr[0];
-          this.arr[0] = value;
-          this.arr.push(temp);
-        }
-      }
       console.log(p);
     }
   }
