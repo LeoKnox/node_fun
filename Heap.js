@@ -19,8 +19,8 @@ class Heap {
         if (this.arr[p] > value) {
           let temp = this.arr[p];
           this.arr[p] = value;
-          this.arr.push(temp);
-          return;
+          //this.arr.push(temp);
+          //return;
         }
         if (this.arr[p] > this.arr[p+1]) {
           p = this.arr[p];
@@ -38,5 +38,5 @@ let arrHeap = new Heap();
 arrHeap.insert(5);
 arrHeap.insert(2);
 arrHeap.insert(6);
-arrHeap.insert(7);
+arrHeap.insert(3);
 console.log(arrHeap);
