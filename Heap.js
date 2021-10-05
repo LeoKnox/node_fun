@@ -20,13 +20,15 @@ class Heap {
           let temp = this.arr[p];
           this.arr[p] = value;
           this.arr.push(temp);
+          return;
         }
-      }
-      if (this.arr[p] > this.arr[p+1]) {
+        if (this.arr[p] > this.arr[p+1]) {
           p = this.arr[p];
         } else {
           p = this.arr[p+1];
         }
+      }
+      this.arr.push(value);
       console.log(p);
     }
   }
