@@ -11,11 +11,24 @@ class Heap {
   }
   
   insert(value) {
-    this.arr.push(value);
+    if (this.arr.length == 0) {
+      this.arr.push(value);
+    } else {
+      let p = 0;
+      while (p < this.arr.length) {
+        if (this.arr[0] > value) {
+          let temp = this.arr[0];
+          this.arr[0] = value;
+          this.arr.push(temp);
+        }
+        p++;
+      }
+    }
     console.log(this.arr);
   }
 };
 
 let arrHeap = new Heap();
 arrHeap.insert(5);
+arrHeap.insert(2);
 console.log(arrHeap);
