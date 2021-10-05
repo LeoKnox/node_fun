@@ -16,20 +16,16 @@ class Heap {
     } else {
       let p = 0;
       while (p < this.arr.length) {
-        if (this.arr[2p] > this.arr[2p+1]) {
-          p = 2p;
+        if (this.arr[p] > this.arr[p+1]) {
+          p = this.arr[p];
         } else {
-          p = 2p+1;
+          p = this.arr[p+1];
         }
-        if (this.arr[0] > value) {
+        if (this.arr[p] > value) {
           let temp = this.arr[0];
           this.arr[0] = value;
           this.arr.push(temp);
-        } else {
-          this.arr.push(value);
-          break;
         }
-        p++;
       }
       console.log(p);
     }
