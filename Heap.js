@@ -20,11 +20,14 @@ class Heap {
     let i = 0;
     while ((p >= 0) && (i < 5)) {
       console.log("loop " + this.arr[p] + " " + this.arr[previous] + " " + p);
+      console.log(this.arr);
       if (this.arr[p] < this.arr[previous]) {
+        console.log("swap");
         let temp = this.arr[p];
         this.arr[p] = this.arr[previous];
         this.arr[previous] = temp;
       }
+      console.log(this.arr);
       p = Math.floor(p/2)-1;
       i++;
     }
