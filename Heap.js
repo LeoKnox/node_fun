@@ -13,15 +13,12 @@ class Heap {
   insert(value) {
     this.arr.push(value);
     let p = this.arr.length - 1;
-    let temp = this.arr[p];
-        this.arr[p] = this.arr[previous];
-        this.arr[previous] = temp;
-    //console.log(p);
-    //let previous = Math.ceil(p/2);
-    //console.log(previous);
+    console.log(p);
+    let previous = Math.ceil(p/2);
+    console.log(previous);
     console.log(p);
     let i = 0;
-    while ((p > 0) && (i < 5)) {
+    do {
       let previous = Math.ceil(p/2);
       console.log("loop " + this.arr[p] + " " + this.arr[previous] + " " + p);
       console.log(this.arr);
@@ -34,7 +31,7 @@ class Heap {
       console.log(this.arr);
       p = Math.floor(p/2)-1;
       i++;
-    }
+    } while ((p >= 0) && (i < 5));
     //if (this.arr[p])
   }
 };
