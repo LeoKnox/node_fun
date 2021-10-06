@@ -13,6 +13,9 @@ class Heap {
   insert(value) {
     this.arr.push(value);
     let p = this.arr.length - 1;
+    let temp = this.arr[p];
+        this.arr[p] = this.arr[previous];
+        this.arr[previous] = temp;
     //console.log(p);
     //let previous = Math.ceil(p/2);
     //console.log(previous);
