@@ -10,13 +10,14 @@ class Queue {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      newNode.next = this.head;
-      this.head = newNode;
+      newNode.next = this.tail;
+      this.tail = newNode;
     }
   }
   
   dequeue() {
-    let value = this.tail.value;
+    let value = this.head.value;
+    this.head = this.head.next;
     return(value);
   }
   
