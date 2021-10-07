@@ -15,6 +15,11 @@ class Queue {
     }
   }
   
+  dequeue() {
+    let value = this.tail.value;
+    return(value);
+  }
+  
   print() {
     let runner = this.head;
     if (this.head == null) {
@@ -42,3 +47,4 @@ myQ.print();
 myQ.add(3);
 myQ.add(9);
 myQ.print();
+console.log(myQ.dequeue());
