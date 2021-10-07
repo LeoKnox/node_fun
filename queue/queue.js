@@ -14,6 +14,16 @@ class Queue {
       this.head = newNode;
     }
   }
+  
+  print() {
+    let runner = this.head;
+    if (this.head == null) {
+      console.log("Empty");
+    } else {
+      console.log(runner.value);
+      this.runner = runner.next;
+    }
+  }
 }
 
 class Node {
@@ -26,4 +36,4 @@ class Node {
 let myQ = new Queue();
 myQ.add(5);
 myQ.add(7);
-console.log(myQ);
+myQ.print();
