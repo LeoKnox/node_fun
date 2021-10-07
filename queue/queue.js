@@ -20,8 +20,10 @@ class Queue {
     if (this.head == null) {
       console.log("Empty");
     } else {
-      console.log(runner.value);
-      this.runner = runner.next;
+      while (runner != null) {
+        console.log(runner.value);
+        this.runner = runner.next;
+      }
     }
   }
 }
