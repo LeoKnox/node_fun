@@ -10,8 +10,9 @@ class Queue {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      newNode.next = this.tail;
-      this.tail = newNode;
+      this.tail.next = newNode;
+      this.tail = this.tail.next;
+      
     }
   }
   
