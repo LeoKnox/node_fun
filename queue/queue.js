@@ -22,7 +22,7 @@ class Queue {
     } else {
       while (runner != null) {
         console.log(runner.value);
-        this.runner = runner.next;
+        runner = runner.next;
       }
     }
   }
@@ -38,4 +38,7 @@ class Node {
 let myQ = new Queue();
 myQ.add(5);
 myQ.add(7);
+myQ.print();
+myQ.add(3);
+myQ.add(9);
 myQ.print();
