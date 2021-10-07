@@ -17,8 +17,12 @@ class Queue {
   }
   
   dequeue() {
-    let value = this.head.value;
-    this.head = this.head.next;
+    if (this.head == null) {
+      console.log("Q is Empty");
+    } else {
+      let value = this.head.value;
+      this.head = this.head.next;
+    }
     return(value);
   }
   
@@ -50,3 +54,14 @@ myQ.add(3);
 myQ.add(9);
 myQ.print();
 console.log(myQ.dequeue());
+console.log(myQ);
+console.log("____");
+myQ.dequeue()
+console.log(myQ);
+myQ.dequeue()
+console.log(myQ);
+myQ.dequeue()
+console.log(myQ);
+myQ.dequeue();
+console.log(myQ);
+myQ.print();
