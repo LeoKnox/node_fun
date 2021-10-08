@@ -6,7 +6,11 @@ class Room {
     this.width = width;
     this.#door = door;
   }
+  
+  showDoor() {
+    console.log(this.#door);
+  }
 }
 
 let level = new Room(5, 5, "red");
-console.log(level.width);
+level.showDoor();
