@@ -1,4 +1,4 @@
-let prices = [2, 8, 3, 13, 1];
+let prices = [2, 8, 3, 13, 1, 25];
 let newLow = newHigh = gain = 0;
 let lowest = highest = prices[0];
 let completeTrade = false;
@@ -23,7 +23,7 @@ for (i = 1; i < prices.length; i++) {
     console.log("called");
     newLow = lowest;
     newHigh = highest;
-    lowest = 0;
+    lowest = prices[i];
     highest = 0;
     gain = 0;
     completeTrade = false;
@@ -33,6 +33,9 @@ for (i = 1; i < prices.length; i++) {
 }
 
 if (newLow == 0) {
+  newLow = lowest;
+  newHigh = highest;
+} else if (gain > newHigh - newLow) {
   newLow = lowest;
   newHigh = highest;
 }
