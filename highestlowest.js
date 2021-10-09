@@ -20,7 +20,7 @@ for (i = 1; i < prices.length; i++) {
   } else if (prices[i] > highest) {
     highest = prices[i];
   } else if (prices[i] < lowest) {
-    if (gain > (newHigh - newLow) && (completeTrade == true)) {
+    if (highest != 0) {
       lowest = prices[i];
       newLow = lowest;
       newHigh = highest;
