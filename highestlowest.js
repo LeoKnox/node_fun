@@ -19,18 +19,16 @@ for (i = 1; i < prices.length; i++) {
     completeTrade = true;
   } else if (prices[i] > highest) {
     highest = prices[i];
-  } else if (prices[i] < lowest) {
-    if (highest != 0) {
+  } else if ((prices[i] < lowest) && (highest != 0)) {
+    console.log("called");
+    newLow = lowest;
+    newHigh = highest;
+    lowest = 0;
+    highest = 0;
+    gain = 0;
+    completeTrade = false;
+  } else {
       lowest = prices[i];
-      newLow = lowest;
-      newHigh = highest;
-      lowest = 0;
-      highest = 0;
-      gain = 0;
-      completeTrade = false;
-    } else {
-      lowest = prices[i];
-    }
   }
 }
 
