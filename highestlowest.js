@@ -1,6 +1,7 @@
 let prices = [2, 8, 3, 13, 1];
 let newLow = newHigh = gain = 0;
 let lowest = highest = prices[0];
+let completeTrade = false;
 
 // loop through prices.
 // low/highest prices
@@ -15,16 +16,18 @@ for (i = 1; i < prices.length; i++) {
   } else if ((prices[i] > highest) && (gain == 0)) {
     highest = prices[i];
     gain = highest - lowest;
+    completeTrade = true;
   } else if (prices[i] > highest) {
     highest = prices[i];
   } else if (prices[i] < lowest) {
-    if (gain > (newHigh - newLow)) {
+    if (gain > (newHigh - newLow) && (completeTrade == true)) {
       lowest = prices[i];
       newLow = lowest;
       newHigh = highest;
       lowest = 0;
       highest = 0;
       gain = 0;
+      completeTrade = false;
     } else {
       lowest = prices[i];
     }
