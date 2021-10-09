@@ -1,4 +1,4 @@
-let prices = [2, 8];
+let prices = [2, 8, 3, 13, 1];
 let newLow = newHigh = gain = 0;
 let lowest = highest = prices[0];
 
@@ -9,6 +9,7 @@ let lowest = highest = prices[0];
 
 console.log(lowest + " " + highest + " " + newLow + " " + newHigh);
 for (i = 1; i < prices.length; i++) {
+  console.log(newLow);
   if ((prices[i] < lowest) && (gain == 0)) {
     lowest = prices[i];
   } else if ((prices[i] > highest) && (gain == 0)) {
@@ -16,9 +17,9 @@ for (i = 1; i < prices.length; i++) {
     gain = highest - lowest;
   } else if (prices[i] > highest) {
     highest = prices[i];
-  } else if (prcies[i] < lowest) {
+  } else if (prices[i] < lowest) {
     if (gain > (newHigh - newLow)) {
-      lowest = pries[i];
+      lowest = prices[i];
       newLow = lowest;
       newHigh = highest;
       lowest = 0;
