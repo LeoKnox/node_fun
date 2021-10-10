@@ -5,7 +5,9 @@
 
 function rotateString(newString, value) {
   let newArray = newString.split("");
-  console.log(newArray);
+  let rotateChar = newArray.shift();
+  newArray.push(rotateChar);
+  console.log(rotateChar + ":" + newArray);
 }
 
 rotateString("scare", 1);
