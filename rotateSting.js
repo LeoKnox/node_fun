@@ -3,13 +3,20 @@
 // pop and push  through array
 // convert array back to string
 
-function rotateString(newString, value) {
-  let newArray = newString.split("");
-  for (i = 0; i < value; i++) {
-    let rotateChar = newArray.shift();
-    newArray.push(rotateChar);
+class stringFun {
+  constructor(newString) {
+    this.newString = newString;
   }
-  console.log(newArray.join(""));
+  rotateString(value) {
+    let newArray = this.newString.split("");
+    for (let i = 0; i < value; i++) {
+      let rotateChar = newArray.shift();
+      newArray.push(rotateChar);
+    }
+    console.log(newArray.join(""));
+  }
 }
 
-rotateString("scare", 5);
+
+let roString = new stringFun("scare");
+roString.rotateString(1);
