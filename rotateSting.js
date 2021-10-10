@@ -5,9 +5,11 @@
 
 function rotateString(newString, value) {
   let newArray = newString.split("");
-  let rotateChar = newArray.shift();
-  newArray.push(rotateChar);
-  console.log(rotateChar + ":" + newArray);
+  for (i = 0; i < value; i++) {
+    let rotateChar = newArray.shift();
+    newArray.push(rotateChar);
+  }
+  console.log(newArray.join(""));
 }
 
-rotateString("scare", 1);
+rotateString("scare", 5);
