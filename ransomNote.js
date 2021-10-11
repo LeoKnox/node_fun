@@ -12,7 +12,12 @@ for (let i = 0; i < words.length; i++) {
 }
 
 for (let j = 0; j < phrase.length; j++) {
-  if (wordsAvail.hasOwnProperty(phrase[j]));
-  console.log(phrase[j]);
+  if (wordsAvail.hasOwnProperty(phrase[j])) {
+    if (wordsAvail[phrase[j]][1] == 0) {
+      delete wordsAvail[phrase[j]];
+    } else {
+      wordsAvail[phrase[j]][1]--;
+    }
+  }
 }
 console.log(wordsAvail);
