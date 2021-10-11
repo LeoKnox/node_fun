@@ -4,8 +4,9 @@
 // return true if words are available
 
 let words = ['one', 'two', 'three', 'one'];
-let phrase = ['one', 'two', 'three'];
+let phrase = ['one', 'two', 'three', 'four'];
 let wordsAvail = {};
+let note = true;
 
 for (let i = 0; i < words.length; i++) {
   if (wordsAvail.hasOwnProperty(words[i])) {
@@ -22,6 +23,8 @@ for (let j = 0; j < phrase.length; j++) {
     } else {
       wordsAvail[phrase[j]][1]--;
     }
+  } else {
+    console.log('false');
   }
 }
 console.log(wordsAvail);
