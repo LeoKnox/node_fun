@@ -8,7 +8,11 @@ let phrase = ['two', 'three'];
 let wordsAvail = {};
 
 for (let i = 0; i < words.length; i++) {
-  wordsAvail[words[i]] = [words[i], 0];
+  if (wordsAvail.hasOwnProperty(words[i])) {
+    wordsAvail[words[i]][1]++;
+  } else {
+    wordsAvail[words[i]] = [words[i], 0];
+  }
 }
 
 for (let j = 0; j < phrase.length; j++) {
