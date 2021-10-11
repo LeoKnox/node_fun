@@ -3,8 +3,8 @@
 // evaluate the dictionary decrementing or deleting matches
 // return true if words are available
 
-let words = ['one', 'two', 'three'];
-let phrase = ['two', 'three'];
+let words = ['one', 'two', 'three', 'one'];
+let phrase = ['one', 'two', 'three'];
 let wordsAvail = {};
 
 for (let i = 0; i < words.length; i++) {
