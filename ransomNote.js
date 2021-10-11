@@ -11,4 +11,8 @@ for (let i = 0; i < words.length; i++) {
   wordsAvail[words[i]] = [words[i], 0];
 }
 
+for (let j = 0; j < phrase.length; j++) {
+  if (wordsAvail.hasOwnProperty(phrase[j]));
+  console.log(phrase[j]);
+}
 console.log(wordsAvail);
