@@ -47,7 +47,8 @@ class Tree {
   }
   
   sum_tree() {
-    let sum = this.head.data;
+    let runner = this.head;
+    let sum = runner.data;
     console.log(sum);
   }
   
