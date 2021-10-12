@@ -46,9 +46,22 @@ class Tree {
     }
   }
   
+  return_data(pointer) {
+    let sum = pointer.data;
+    if (pointer.left != null) {
+      sum += this.return_data(pointer.left);
+    }
+    if (pointer.right != null) {
+      sum += this.return_data(pointer.right);
+    }
+    return(sum);
+  }
+  
   sum_tree() {
     let runner = this.head;
     let sum = runner.data;
+    sum += this.return_data(runner.right);
+    sum += this.return_data(runner.left);
     console.log(sum);
   }
   
