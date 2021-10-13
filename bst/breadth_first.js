@@ -50,11 +50,12 @@ class Tree {
   }
   
   bf_tree(pointer) {
+    console.log("bf:"+pointer.data);
     if (pointer.left !== null) {
-      this.scan_tree(pointer.left);
+      return(this.scan_tree(pointer.left));
     }
     if (pointer.right !== null) {
-      this.scan_tree(pointer.right);
+      return(this.scan_tree(pointer.right));
     }
     return (pointer.data);
   }
