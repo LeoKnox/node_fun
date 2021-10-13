@@ -43,10 +43,20 @@ class Tree {
       console.log("Emptry Tree");
     } else {
       queue.push(cur_node.data);
-      this.scan_tree(cur_node.left);
-      this.scan_tree(cur_node.right);
+      queue.push(this.bf_tree(cur_node.left));
+      queue.push(this.bf_tree(cur_node.right));
     }
     console.log(queue);
+  }
+  
+  bf_tree(pointer) {
+    if (pointer.left !== null) {
+      this.scan_tree(pointer.left);
+    }
+    if (pointer.right !== null) {
+      this.scan_tree(pointer.right);
+    }
+    return (pointer.data);
   }
   
   scan_tree(pointer) {
@@ -83,4 +93,4 @@ new_tree.insert(1);
 new_tree.print_tree();
 new_tree.breadthFirst();
 console.log("more good stuff");
-//console.log(new_tree.head);
+console.log(new_tree.head);
