@@ -38,24 +38,26 @@ class Tree {
     
   breadthFirst() {
     let queue = [];
+    let level = 0;
     let cur_node = this.head;
     if (cur_node === null) {
       console.log("Emptry Tree");
     } else {
       queue.push(cur_node.data);
-      queue.push(this.bf_tree(cur_node.left));
-      queue.push(this.bf_tree(cur_node.right));
+      queue.push(this.bf_tree(cur_node.left, 1));
+      queue.push(this.bf_tree(cur_node.right, 1));
     }
     console.log(queue);
   }
   
-  bf_tree(pointer) {
+  bf_tree(pointer, level) {
     console.log("bf:"+pointer.data);
+    level++;
     if (pointer.left !== null) {
-      return(this.scan_tree(pointer.left));
+      return(this.scan_tree(pointer.left), level);
     }
     if (pointer.right !== null) {
-      return(this.scan_tree(pointer.right));
+      return(this.scan_tree(pointer.right), level);
     }
     return (pointer.data);
   }
