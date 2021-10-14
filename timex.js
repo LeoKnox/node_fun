@@ -10,5 +10,13 @@ class timex{
 let newList = [];
 let newTimex = new timex("list", 0);
 newList.push(newTimex);
-newList.push(new timex("string", 5));
+while(newTimex[0] > 0) {
+  if (newString = true) {
+    newList.push(new timex("string", newTimex[0].time));
+    newTimex -= 1;
+  } else {
+    newTimex -= 1;
+  }
+}
+
 console.log(newList);
