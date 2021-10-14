@@ -10,4 +10,5 @@ class timex{
 let newList = [];
 let newTimex = new timex("list", 0);
 newList.push(newTimex);
-console.log(newList[0].time);
+newList.push(new timex("string", 5));
+console.log(newList);
