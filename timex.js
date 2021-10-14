@@ -7,5 +7,7 @@ class timex{
   
 }
 
+let newList = [];
 let newTimex = new timex("list", 0);
-console.log(newTimex);
+newList.push(newTimex);
+console.log(newList[0].time);
